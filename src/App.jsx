@@ -34,12 +34,12 @@ export default function App() {
   const scale8 = useTransform(scrollYProgress, [0, 1], [8, 1]);
 
   const boxes = [
-    { color: '#8911ff', width: 35, height: 30, scale: scale4 , heading: 'Box'},
-    { color: '#ff8c19', width: 20, height: 45, scale: scale6 , heading: 'Box'},
-    { color: '#FF13F0', width: 25, height: 25, scale: scale5 , heading: 'Box'},
-    { color: '#283750', width: 20, height: 25, scale: scale8 , heading: 'Box'},
-    { color: '#892055', width: 30, height: 25, scale: scale6 , heading: 'Box'},
-    { color: '#fa551e', width: 30, height: 25, scale: scale8 , heading: 'Hovered Box'},
+    { color: '#8911ff', width: 56, height: 30, scale: scale4 , heading: 'Box'},
+    { color: '#ff8c19', width: 29, height: 56, scale: scale6 , heading: 'Box'},
+    { color: '#FF13F0', width: 32, height: 25, scale: scale5 , heading: 'Box'},
+    // { color: '#283750', width: 22, height: 25, scale: scale8 , heading: 'Box'},
+    { color: '#892055', width: 28, height: 24.5, scale: scale6 , heading: 'Box'},
+    { color: '#fa551e', width: 55, height: 25, scale: scale8 , heading: 'Hovered Box'},
   ];
 
   return (
@@ -72,6 +72,7 @@ export default function App() {
                     })
                 }
             </div>
+              
         </div>
   );
 }

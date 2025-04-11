@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 
 
-const SECTION_HEIGHT = 1500
+const SECTION_HEIGHT = 1200
 
 export default function AnimatedBox () {
 
@@ -20,7 +20,7 @@ export default function AnimatedBox () {
     const backgroundSize = useTransform(scrollY, [0, SECTION_HEIGHT + 500], ["150%", "100%"]);
 
 
-    const scale = useTransform(scrollY, [0, 1500], [.8, .1]);
+    const scale = useTransform(scrollY, [0, 1500], [.5, .2]);
 
     // Text color animation - changes from one color to another
     const textColor = useTransform(

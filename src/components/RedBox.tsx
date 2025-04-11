@@ -26,7 +26,7 @@ const RedBox = (props) => {
         width: `${props.width}vw`,
         height: `${props.height}vh`,
       }}
-      className="flex items-center shadow-lg text-white cursor-pointer relative"
+      className="items-center shadow-lg text-white cursor-pointer relative"
       initial={false} 
       whileHover={
         isLargeScreen
@@ -47,7 +47,7 @@ const RedBox = (props) => {
     >
       <div className="text-left">
         <h2 className="lg:p-6 p-2 font-extrabold lg:text-6xl">{props.heading}</h2>
-        <p className='lg:p-6 p-2 text-sm lg:font-extrabold lg:text-xl'>{props.color}</p>
+        <p className='p-2'>{props.color}</p>
       </div>
     </motion.div>
   );
