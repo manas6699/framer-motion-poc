@@ -26,7 +26,7 @@ const RedBox = (props) => {
         width: `${props.width}vw`,
         height: `${props.height}vh`,
       }}
-      className="items-center shadow-lg text-white cursor-pointer relative"
+      className="items-center shadow-lg text-white cursor-pointer"
       initial={false} 
       whileHover={
         isLargeScreen

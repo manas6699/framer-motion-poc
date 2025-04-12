@@ -30,16 +30,16 @@ export default function App() {
 
   const scale4 = useTransform(scrollYProgress, [0, 1], [4, 1]);
   const scale5 = useTransform(scrollYProgress, [0, 1], [5, 1]);
-  const scale6 = useTransform(scrollYProgress, [0, 1], [6, 1]);
+  const scale6 = useTransform(scrollYProgress, [0, 1], [7, 1]);
   const scale8 = useTransform(scrollYProgress, [0, 1], [8, 1]);
 
   const boxes = [
-    { color: '#8911ff', width: 56, height: 30, scale: scale4 , heading: 'Box'},
-    { color: '#ff8c19', width: 29, height: 56, scale: scale6 , heading: 'Box'},
-    { color: '#FF13F0', width: 32, height: 25, scale: scale5 , heading: 'Box'},
+    { color: '#8911ff', width: 57, height: 30, scale: scale4 , heading: 'Box'},
+    { color: '#ff8c19', width: 35, height: 30, scale: scale6 , heading: 'Box'},
+    { color: '#FF13F0', width: 33, height: 26, scale: scale5 , heading: 'Box'},
     // { color: '#283750', width: 22, height: 25, scale: scale8 , heading: 'Box'},
-    { color: '#892055', width: 28, height: 24.5, scale: scale6 , heading: 'Box'},
-    { color: '#fa551e', width: 55, height: 25, scale: scale8 , heading: 'Hovered Box'},
+    { color: '#892055', width: 94, height: 32, scale: scale6 , heading: 'Box'},
+    { color: '#fa551e', width: 35, height: 26, scale: scale8 , heading: 'Box'},
   ];
 
   return (

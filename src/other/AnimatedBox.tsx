@@ -37,7 +37,7 @@ export default function AnimatedBox () {
 
     const textY = useTransform(scrollY, [0, 1500], ["0%", "500%"]);
 
-    const backgroundColor = useTransform(scrollY, [0, 1500], ['#fa551e', '#FFFF00'])
+    const backgroundColor = useTransform(scrollY, [0, 1500], ['#000000', '#FFFF00'])
 
     // Function to determine which text to display based on scroll progress
     useMotionValueEvent(textProgress, "change", (latest) => {
@@ -50,7 +50,7 @@ export default function AnimatedBox () {
     return (
         <>
 
-            <motion.div className='sticky h-screen w-screen aspect-square top-0 justify-center items-center'
+            <motion.div className='sticky z-50 h-screen w-screen aspect-square top-0 justify-center items-center'
                 style={{
                     backgroundSize,
                     scale,
