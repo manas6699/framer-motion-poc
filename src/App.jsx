@@ -34,8 +34,8 @@ export default function App() {
   const scale8 = useTransform(scrollYProgress, [0, 1], [8, 1]);
 
   const boxes = [
-    { color: '#8911ff', width: 57, height: 30, scale: scale4 , heading: 'Box'},
-    { color: '#ff8c19', width: 35, height: 30, scale: scale6 , heading: 'Box'},
+    { color: '#eff702', width: 57, height: 30, scale: scale4 , heading: 'Box', fontclr: 'blue'},
+    { color: '#ffffff', width: 35, height: 30, scale: scale6 , heading: 'Box' , fontclr: 'blue'},
     { color: '#FF13F0', width: 33, height: 26, scale: scale5 , heading: 'Box'},
     // { color: '#283750', width: 22, height: 25, scale: scale8 , heading: 'Box'},
     { color: '#892055', width: 94, height: 32, scale: scale6 , heading: 'Box'},
@@ -58,7 +58,7 @@ export default function App() {
             <div className="sticky">
                 <AnimatedBox/>
                 {
-                    boxes.map(({color , width, height , scale , heading} , index) => {
+                    boxes.map(({color , width, height , scale , heading , fontclr} , index) => {
                       return <motion.div key={index} style={{scale}} className='el'>
                        <motion.div className="imageContainer">
                         <RedBox
@@ -66,6 +66,7 @@ export default function App() {
                         width={width}
                         height={height}
                         heading={heading}
+                        fontclr={fontclr}
                       />
                        </motion.div>
                       </motion.div>

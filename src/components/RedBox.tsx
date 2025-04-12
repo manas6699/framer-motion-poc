@@ -25,6 +25,7 @@ const RedBox = (props) => {
         backgroundColor: props.color,
         width: `${props.width}vw`,
         height: `${props.height}vh`,
+        color: `${props.fontclr}`
       }}
       className="items-center shadow-lg text-white cursor-pointer"
       initial={false} 

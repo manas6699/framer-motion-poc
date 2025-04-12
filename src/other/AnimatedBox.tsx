@@ -26,25 +26,28 @@ export default function AnimatedBox () {
     const textColor = useTransform(
         scrollY,
         [0, 1500],
-        ['#ffffff', '#000000']
+        ['#6c42f5', '#ffffff']
     );
 
     // For changing text content, we need to use a different approach
     // since we can't directly interpolate strings with useTransform
-    const [currentText, setCurrentText] = useState("This is the first text");
+    const [currentText, setCurrentText] = useState("At Dropbox, we are building the future of work.");
 
     const textProgress = useTransform(scrollY, [0, 1500], [0, 2]);
 
-    const textY = useTransform(scrollY, [0, 1500], ["0%", "500%"]);
+    const textY = useTransform(scrollY, [0, 1500], ["0%", "200%"]);
 
-    const backgroundColor = useTransform(scrollY, [0, 1500], ['#000000', '#FFFF00'])
+    const backgroundColor = useTransform(scrollY, [0, 1500], ['#ffffff', '#6c42f5'])
+
+    const borderColor = useTransform(scrollY, [0, 1500], ['#6c42f5', '#6c42f5'])
+    const borderWidth = useTransform(scrollY, [0, 1500], ['2px', '0px'])
 
     // Function to determine which text to display based on scroll progress
     useMotionValueEvent(textProgress, "change", (latest) => {
         if (latest < 0.5) {
-            setCurrentText("This is the first text");
+            setCurrentText("At Dropbox, we are building the future of work.");
         } else {
-            setCurrentText("This is the final text");
+            setCurrentText("We are building the future of work.");
         }
     });
     return (
@@ -54,11 +57,13 @@ export default function AnimatedBox () {
                 style={{
                     backgroundSize,
                     scale,
-                    backgroundColor
+                    backgroundColor,
+                    borderColor,
+                    borderWidth
                 }}
             >
                 <motion.p
-                    className="p-6 font-extrabold lg:text-6xl"
+                    className="p-6 font-extrabold text-4xl lg:text-8xl w-3/4"
                     style={{ color: textColor, translateY: textY }}
                 >
                     {currentText}
